@@ -2,7 +2,13 @@
 
 A teknik.io uploader for Android.
 
-## Usage
+## Download
+
+Get it from the [latest release](https://github.com/IvanFon/tekdroid/releases/latest).
+
+## Development
+
+### Usage
 
 ``` bash
 # Install dependencies
@@ -21,7 +27,7 @@ yarn run watch:android
 yarn run clean
 ```
 
-## TODO
+### TODO
 
 - Switch to a file picker instead of an image picker
   - You can still choose any file through a file browser like Amaze, but Android's default file browser restricts you to images
