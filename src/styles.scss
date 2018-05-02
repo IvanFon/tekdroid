@@ -1,0 +1,65 @@
+// NativeScript core theme
+// @see https://docs.nativescript.org/ui/theme
+@import '~nativescript-theme-core/scss/skins/dark/index';
+
+$sky: #418bca;
+$btn-color: $sky;
+
+@import '~nativescript-theme-core/scss/index';
+
+// Global SCSS styling
+// @see https://docs.nativescript.org/ui/styling
+
+$tab-text-color: $primary;
+TabView {
+  tab-background-color: $background;
+  tab-text-color: darken($tab-text-color, 25%);
+  selected-tab-text-color: $tab-text-color;
+  android-selected-tab-highlight-color: $sky;
+}
+
+// Upload card
+.upload-card {
+  background-color: darken($background, 3%);
+  border-radius: 20;
+  padding: 15;
+
+  Image {
+    border-radius: 10;
+  }
+
+  Label {
+    color: white;
+  }
+}
+
+ActionBar {
+  color: $primary;
+  background-color: $background;
+}
+
+ActivityIndicator {
+  color: $sky;
+}
+
+Button.upload-action {
+  background-color: darken($background, 5%);
+  color: darken(white, 10%);
+
+  // &.copy {
+  //   color: darken(green, 5%);
+  // }
+
+  // &.share {
+  //   color: darken($sky, 25%);
+  // }
+
+  // &.delete {
+  //   color: darken(red, 15%);
+  //   font-size: 16;
+  // }
+}
+
+Progress {
+  color: $sky;
+}
