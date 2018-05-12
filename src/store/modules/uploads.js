@@ -19,7 +19,8 @@ const getters = {
 
 const mutations = {
   loadUploads (state, uploads) {
-    state.uploads = uploads;
+    // Remove unfinished uploads
+    state.uploads = uploads.filter(upload => !upload.loading);
   },
   startUpload (state) {
     state.uploads.push(
@@ -58,6 +59,8 @@ const actions = {
       file.readText()
         .then(content => {
           context.commit('loadUploads', JSON.parse(content));
+          // Save uploads in case any were removed
+          context.dispatch('saveUploads');
         });
     }
   },
